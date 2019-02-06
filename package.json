@@ -1,0 +1,22 @@
+{
+  "name": "aws-web-utilities",
+  "version": "1.0.0",
+  "description": "Make sure a website is running",
+  "main": "handler.js",
+  "scripts": {
+    "start": "./node_modules/.bin/serverless offline -s dev",
+    "debug": "serverless invoke local -f ping",
+    "deploy": "serverless deploy --stage test",
+    "deploy-production": "serverless deploy --stage production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zymotik/aws-web-utilities.git"
+  },
+  "author": "Ian Brown",
+  "license": "MIT",
+  "homepage": "https://github.com/zymotik/aws-web-utilities#readme",
+  "devDependencies": {
+    "serverless": "^1.36.3"
+  }
+}
