@@ -19,4 +19,9 @@ package:
   exclude:
     - node_modules/**
     - test/**
+    - .vscode/**
+    - package*.json
+    - README.md
+    - .gitignore
+    - LICENSE
 #    - '!node_modules/node-fetch/**'
