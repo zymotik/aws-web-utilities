@@ -7,7 +7,13 @@
     "start": "./node_modules/.bin/serverless offline -s dev",
     "debug": "serverless invoke local -f ping",
     "deploy": "serverless deploy --stage test",
-    "deploy-production": "serverless deploy --stage production"
+    "deploy-production": "serverless deploy --stage production",
+    "test": "npm run test:404 && npm run test:google && npm run test:missing-http && npm run test:no-domain && npm run test:null",
+    "test:404": "serverless invoke local --function ping --path ./test/fixtures/404.json",
+    "test:google": "serverless invoke local --function ping --path ./test/fixtures/google.json",
+    "test:missing-http": "serverless invoke local --function ping --path ./test/fixtures/missing-http.json",
+    "test:no-domain": "serverless invoke local --function ping --path ./test/fixtures/no-domain.json",
+    "test:null": "serverless invoke local --function ping --path ./test/fixtures/null.json"
   },
   "repository": {
     "type": "git",
